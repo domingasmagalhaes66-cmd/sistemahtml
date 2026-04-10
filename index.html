@@ -1,31 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <title>Sistema de controle financeiro pessoal</title>
+    <meta charset="UTF-8">
+    <title>Controle Financeiro</title>
 </head>
+
 <body>
 
-  <h1>Sistema de contole Financeiro Pessoal</h1>
-  <div class="cards">
-    <div class="card receita">Receitas: <span id="receitas">0</span></div>
-    <div class="card despesa">Despesas: <span id="despesas">0</span></div>
-    <div class="card saldo">saldo<span id="saldo">0</span></div>
+    <center>
+        <h1>Sistema de controle Financeiro Pessoal</h1>
+        <p><a href="./index.html">⬅ Voltar ao início</a></p>
+    </center>
 
-  <div class="meta">
-    Meta mensal: <input type="number" id="meta">
-    <button>Salvar</button>
-  </div>
-  <form id="form">
-    <input type="text" id="descricao" placeholder="Descrição" required>
-    <input type="number" id="valor" placeholder="Valor" required>
-    <select id="tipo">
-      <option value="receita">Receita</option>
-      <option value="despesa">Despesa</option>
-    </select>
-    <button>Adicionar</button>
-  </form>
+    <hr>
 
-</div>
-<body>
+    <h2>Receitas</h2>
+    <table border="1" width="100%">
+        <tr>
+            <th>Fonte</th>
+            <th>Valor (kz)</th>
+        </tr>
+        <tr>
+            <td>Salário</td>
+            <td>100000</td>
+        </tr>
+        <tr>
+            <td>Freelance</td>
+            <td>200</td>
+        </tr>
+    </table>
+
+    <h2>Despesas</h2>
+    <table border="1" width="100%">
+        <tr>
+            <th>Categoria</th>
+            <th>Valor (kz)</th>
+        </tr>
+        <tr>
+            <td>Aluguel</td>
+            <td>-10000</td>
+        </tr>
+        <tr>
+            <td>Alimentação</td>
+            <td>-10000</td>
+        </tr>
+        <tr>
+            <td>Lazer</td>
+            <td>-10000</td>
+        </tr>
+    </table>
+
+    <h2>Resumo</h2>
+    <p><strong>Total Receitas:</strong>100000kz</p>
+    <p><strong>Total Despesas:</strong>30000kz</p>
+    <p><strong>Saldo Final:</strong>70000kz</p>
+
+    <h2Metas</h2>
+    <ul>
+        <li>Guardar 30kz por mês</li>
+        <li>Criar reserva de emergência</li>
+        <li>Evitar gastos desnecessários</li>
+    </ul>
+
+    <hr>
+
+    <center>
+        <p>2026 - Controle Financeiro</p>
+    </center>
+
+</body>
 </html>
