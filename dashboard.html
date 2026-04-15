@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle Financeiro</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: #2E7D32;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    input, select, button {
+      padding: 10px;
+      margin: 5px;
+    }
+    button {
+      background: #2E7D32;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+    .saldo {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Controle Financeiro</h1>
+  </header>
+
+  <div class="container">
+    <h2>Adicionar Transação</h2>
+    <input type="text" id="descricao" placeholder="Descrição">
+    <input type="number" id="valor" placeholder="Valor">
+    <select id="tipo">
+      <option value="receita">Receita</option>
+      <option value="despesa">Despesa</option>
+    </select>
+    <button onclick="adicionar()">Adicionar</button>
+
+    <div class="saldo" id="saldo">Saldo: 0 Kz</div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Valor</th>
+          <th>Tipo</th>
+        </tr>
+      </thead>
+      <tbody id="tabela"></tbody>
+    </table>
+  </div>
+
+  <script>
+    let transacoes = [];
+
+    function adicionar() {
+      const descricao = document.getElementById('descricao').value;
+      const valor = parseFloat(document.getElementById('valor').value);
+      const tipo = document.getElementById('tipo').value;
+
+      if (!descricao || !valor) {
+        alert('Preencha todos os campos!');
+        return;
+      }
+
+      transacoes.push({ descricao, valor, tipo });
+      atualizar();
+    }
+
+    function atualizar() {
+      const tabela = document.getElementById('tabela');
+      tabela.innerHTML = '';
+
+      let saldo = 0;
+
+      transacoes.forEach(t => {
+        const linha = `<tr>
+          <td>${t.descricao}</td>
+          <td>${t.valor} Kz</td>
+          <td>${t.tipo}</td>
+        </tr>`;
+        tabela.innerHTML += linha;
+
+        saldo += t.tipo === 'receita' ? t.valor : -t.valor;
+      });
+
+      document.getElementById('saldo').innerText = 'Saldo: ' + saldo + ' Kz';
+    }
+  </script>
+</body>
+</html>

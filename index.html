@@ -1,72 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Fistema de Fontrole Financeiro Pessoal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bem-vindo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #4CAF50, #2E7D32);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: white;
+      color: #2E7D32;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
 </head>
-
 <body>
+  <div class="container">
+    <h1>Bem-vindo ao Sistema Financeiro</h1>
+    <p>Gerencie suas receitas e despesas facilmente</p>
+    <button onclick="entrar()">Entrar</button>
+  </div>
 
-    <center>
-        <h1>Sistema de controle Financeiro Pessoal</h1>
-        <p><a href="./index.html">⬅ Voltar ao início</a></p>
-    </center>
-
-    <hr>
-
-    <h2>Receitas</h2>
-    <table border="1" width="100%">
-        <tr>
-            <th>Fonte</th>
-            <th>Valor (kz)</th>
-        </tr>
-        <tr>
-            <td>Salário</td>
-            <td>100000</td>
-        </tr>
-        <tr>
-            <td>Freelance</td>
-            <td>200</td>
-        </tr>
-    </table>
-
-    <h2>Despesas</h2>
-    <table border="1" width="100%">
-        <tr>
-            <th>Categoria</th>
-            <th>Valor (kz)</th>
-        </tr>
-        <tr>
-            <td>Aluguel</td>
-            <td>-10000</td>
-        </tr>
-        <tr>
-            <td>Alimentação</td>
-            <td>-10000</td>
-        </tr>
-        <tr>
-            <td>Lazer</td>
-            <td>-10000</td>
-        </tr>
-    </table>
-
-    <h2>Resumo</h2>
-    <p><strong>Total Receitas:</strong>100000kz</p>
-    <p><strong>Total Despesas:</strong>30000kz</p>
-    <p><strong>Saldo Final:</strong>70000kz</p>
-
-    <h2Metas</h2>
-    <ul>
-        <li>Guardar 30kz por mês</li>
-        <li>Criar reserva de emergência</li>
-        <li>Evitar gastos desnecessários</li>
-    </ul>
-
-    <hr>
-
-    <center>
-        <p>2026 - Controle Financeiro</p>
-    </center>
-
+  <script>
+    function entrar() {
+      window.location.href = "dashboard.html";
+    }
+  </script>
 </body>
 </html>
