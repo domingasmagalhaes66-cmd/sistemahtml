@@ -36,3 +36,67 @@ input{
 .despesa {
     color: red;
 }
+
+
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1554224155-6726b3ff858f") no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Conteúdo central */
+.conteudo {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.conteudo h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+
+.conteudo p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+.botao {
+    text-decoration: none;
+    background: #00c853;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 25px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+
+.botao:hover {
+    background: #009624;
+}
