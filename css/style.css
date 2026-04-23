@@ -1,6 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: skyblue;
+    background: slateblue;
     text-align: center;
 }
 
@@ -12,13 +12,13 @@ table {
 }
 
 th, td {
-    border: 1px springgreen;
+    border: 1px sienna;
     padding: 10px;
     text-align: center;
 }
 
 th {
-    background: #333;
+    background: rgba(0, 0, 0, 0.6);
     color: slateblue;
 
 }
@@ -34,7 +34,7 @@ input{
     color: rosybrown;
 }
 .despesa {
-    color: red;
+    color: rosybrown;
 }
 
 
@@ -64,7 +64,6 @@ body {
     background: rgba(0, 0, 0, 0.6);
 }
 
-/* Conteúdo central */
 .conteudo {
     position: relative;
     color: white;
